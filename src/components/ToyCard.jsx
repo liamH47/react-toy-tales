@@ -1,15 +1,29 @@
 import React, { Component } from 'react';
 
+
 class ToyCard extends Component {
 
+  localDeleteHandler = () => {
+    this.props.deleteHandler(this.props, this.props.id)
+    console.log(this.props.id)
+  }
+
+  localLikeHandler = () => {
+    console.log(this.props.likes)
+    let likes = this.props.likes
+    let id =this.props.id
+    this.props.likeHandler(likes, id)
+  }
+
   render() {
+    const { toy } = this.props;
     return (
       <div className="card">
-        <h2>{'' /* Toy's Name */}</h2>
-        <img src={'' /* Toy's Image */} alt={'' /* Toy's Name */} className="toy-avatar" />
-        <p>{'' /* Toy's Likes */} Likes </p>
-        <button className="like-btn">Like {'<3'}</button>
-        <button className="del-btn">Donate to GoodWill</button>
+        <h2>{toy.name}</h2>
+        <img src={toy.image} alt={toy.name} className="toy-avatar" />
+        <p>{toy.likes} Likes </p>
+        <button onClick={this.localLikeHandler} className="like-btn">Like {'<3'}</button>
+        <button onClick={this.localDeleteHandler} className="del-btn">Donate to GoodWill</button>
       </div>
     );
   }
