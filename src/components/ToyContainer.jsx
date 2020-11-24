@@ -39,7 +39,9 @@ class ToyContainer extends React.Component {
     })
   }
 
-  deleteHandler = (toyObj, id) => {
+  deleteHandler = (id) => {
+    const currentToys = this.state.api
+    this.setState({ api: currentToys.filter(toy => toy.id !== id)})
     fetch(`http://localhost:3000/toys/${id}`, {
       method: 'DELETE',
     })

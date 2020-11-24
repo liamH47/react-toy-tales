@@ -40,13 +40,19 @@
       "id": 7,
       "name": "Hamm",
       "image": "https://cdn140.picsart.com/244090226021212.png?r1024x1024",
-      "likes": 0
+      "likes": 2
     },
     {
       "id": 8,
       "name": "Little Green Men",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Alien-PNG-File.png",
       "likes": 5
+    },
+    {
+      "name": "Evil Emperor Zurg",
+      "image": "https://i.pinimg.com/originals/e7/ca/9c/e7ca9c9f9758a27a7c2c85ddbdd5037d.jpg",
+      "likes": 0,
+      "id": 9
     }
   ]
 }

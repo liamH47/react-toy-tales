@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 class ToyCard extends Component {
 
   localDeleteHandler = () => {
-    this.props.deleteHandler(this.props, this.props.id)
+    this.props.deleteHandler(this.props.id)
     console.log(this.props.id)
   }
 
